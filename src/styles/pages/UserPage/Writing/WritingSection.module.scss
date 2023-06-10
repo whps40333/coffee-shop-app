@@ -1,0 +1,44 @@
+.wrapper {
+  position: relative;
+  width: 30rem;
+  top: 1.5rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 1rem;
+}
+
+.control {
+  margin: 1rem 0;
+  border-bottom: 2px solid #cdcdcd;
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    font-size: 1rem;
+    padding: 1rem;
+    color: #a5a4a4;
+
+    &::placeholder {
+      color: #848484;
+      letter-spacing: 0.5rem;
+      width: fit-content;
+      padding: 0.1rem;
+    }
+
+    &:hover {
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: black;
+    }
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+  }
+}
