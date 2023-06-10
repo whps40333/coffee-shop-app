@@ -5,6 +5,7 @@ import MainPage from "../Pages/MainPage/MainPage.jsx";
 import RegisterPage from "../Pages/RegisterPage";
 import AuthContext from "../store/auth-context";
 import UserLayout from "../Pages/UserPage/UserLayout";
+import NotFoundPage from "../Pages/NotFoundPage";
 
 function Router() {
   const authCtx = useContext(AuthContext);
@@ -48,6 +49,7 @@ function Router() {
           )
         }
       />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
