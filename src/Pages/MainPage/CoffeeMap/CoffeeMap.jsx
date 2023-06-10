@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import styles from "../../../styles/pages/MainPage/CoffeeMap/CoffeeMap.module.scss";
 import InfoWindowComponent from "./InfoWindow";
+import CoffeeLogo from "../../../images/coffeeLogo.png";
 
 function CoffeeMap() {
   const [stores, setStores] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState();
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
+
   const apiKey = "AIzaSyBxol_vebXa90e1VtfWoGXjASEg3Hjn1lA";
   const mapStyles = {
     height: "100%",
@@ -17,6 +20,21 @@ function CoffeeMap() {
   const defaultCenter = {
     lat: 24.9861391,
     lng: 121.5773635,
+  };
+
+  const createCustomMarker = (position, map) => {
+    return new window.google.maps.Marker({
+      position: position,
+      icon: {
+        url: CoffeeLogo,
+        scaledSize: new window.google.maps.Size(25, 25),
+      }, // 替換成您自己圖標的路徑
+      map: map,
+    });
+  };
+
+  const DarkModeHandler = () => {
+    setDarkMode((prevMode) => !prevMode);
   };
 
   useEffect(() => {
@@ -73,11 +91,21 @@ function CoffeeMap() {
 
   return (
     <div className={styles.map}>
+      <button onClick={DarkModeHandler}>切換深色模式</button>
       <LoadScript googleMapsApiKey={apiKey}>
         <GoogleMap
           mapContainerStyle={mapStyles}
           center={defaultCenter}
           zoom={15}
+          onLoad={(map) => {
+            stores.forEach((store) => {
+              const marker = createCustomMarker(
+                { lat: store.lat, lng: store.lng },
+                map
+              );
+              marker.addListener("click", () => markerHandler(store));
+            });
+          }}
         >
           {stores.map((store) => (
             <Marker
@@ -92,7 +120,7 @@ function CoffeeMap() {
                 <InfoWindowComponent feature={store} />
               )}
             </Marker>
-          ))}
+          ))}{" "}
           <Marker position={defaultCenter} />
         </GoogleMap>
       </LoadScript>

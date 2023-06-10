@@ -69,7 +69,7 @@ function RegisterPage() {
         emailState.value,
         passwordState.value
       );
-      navigate("main");
+      navigate("/main");
       const user = userCredential.user;
       console.log(user);
     } catch (error) {

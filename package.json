@@ -1,7 +1,7 @@
 {
-  "name": "coffee-shop-latest",
+  "name": "coffee-shop-app",
   "version": "0.1.0",
-  "homepage": "https://whps40333.github.io/coffee-shop-latest",
+  "homepage": "https://whps40333.github.io/coffee-shop-app",
   "private": true,
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.35",
@@ -10,8 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
-    "firebase": "^9.22.1",
-    "google-maps-react": "^2.0.6",
+    "firebase": "^9.22.2",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

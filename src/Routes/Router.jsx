@@ -12,11 +12,11 @@ function Router() {
   return (
     <Routes>
       <Route
-        path="/coffee-shop-latest/"
+        path="/coffee-shop-app/"
         element={!authCtx.isLoggedIn && <LoginPage onLogin={authCtx.onLogin} />}
       />
       <Route
-        path="main"
+        path="/coffee-shop-app/main"
         element={
           authCtx.isLoggedIn && (
             <MainPage
@@ -27,11 +27,11 @@ function Router() {
         }
       />
       <Route
-        path="register"
+        path="/coffee-shop-app/register"
         element={!authCtx.isLoggedIn && <RegisterPage />}
       />
       <Route
-        path="user/*"
+        path="/coffee-shop-app/user/*"
         element={
           authCtx.isLoggedIn && (
             <Routes>
