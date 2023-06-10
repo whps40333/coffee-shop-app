@@ -10,12 +10,12 @@ const Navigation = (props) => {
       <ul>
         {authCtx.isLoggedIn && (
           <li>
-            <a href="/coffee-shop-app/user">使用者功能</a>
+            <a href="/user">使用者功能</a>
           </li>
         )}
         {authCtx.isLoggedIn && (
           <li>
-            <a href="/coffee-shop-app/main">店家清單</a>
+            <a href="/main">店家清單</a>
           </li>
         )}
 

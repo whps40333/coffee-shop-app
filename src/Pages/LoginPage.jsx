@@ -139,7 +139,7 @@ function LoginPage(props) {
                 登入
               </WhiteButton>
             </div>
-            <a href="/coffee-shop-app/register">前往註冊</a>
+            <a href="register">前往註冊</a>
           </form>
         </BlackCard>
         <video className={styles.vedio} autoPlay loop muted>

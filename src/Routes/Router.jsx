@@ -5,7 +5,6 @@ import MainPage from "../Pages/MainPage/MainPage.jsx";
 import RegisterPage from "../Pages/RegisterPage";
 import AuthContext from "../store/auth-context";
 import UserLayout from "../Pages/UserPage/UserLayout";
-import NotFoundPage from "../Pages/NotFoundPage";
 
 function Router() {
   const authCtx = useContext(AuthContext);
@@ -13,11 +12,11 @@ function Router() {
   return (
     <Routes>
       <Route
-        path="/coffee-shop-app"
+        path="/"
         element={!authCtx.isLoggedIn && <LoginPage onLogin={authCtx.onLogin} />}
       />
       <Route
-        path="/coffee-shop-app/main"
+        path="main"
         element={
           authCtx.isLoggedIn && (
             <MainPage
@@ -28,11 +27,11 @@ function Router() {
         }
       />
       <Route
-        path="/coffee-shop-app/register"
+        path="/register"
         element={!authCtx.isLoggedIn && <RegisterPage />}
       />
       <Route
-        path="/coffee-shop-app/user/*"
+        path="/user/*"
         element={
           authCtx.isLoggedIn && (
             <Routes>
@@ -49,7 +48,6 @@ function Router() {
           )
         }
       />
-      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
