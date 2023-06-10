@@ -9,7 +9,6 @@ function CoffeeMap() {
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState();
   const [selectedMarker, setSelectedMarker] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
 
   const apiKey = "AIzaSyBxol_vebXa90e1VtfWoGXjASEg3Hjn1lA";
   const mapStyles = {
@@ -31,10 +30,6 @@ function CoffeeMap() {
       }, // 替換成您自己圖標的路徑
       map: map,
     });
-  };
-
-  const DarkModeHandler = () => {
-    setDarkMode((prevMode) => !prevMode);
   };
 
   useEffect(() => {
@@ -91,7 +86,6 @@ function CoffeeMap() {
 
   return (
     <div className={styles.map}>
-      <button onClick={DarkModeHandler}>切換深色模式</button>
       <LoadScript googleMapsApiKey={apiKey}>
         <GoogleMap
           mapContainerStyle={mapStyles}
