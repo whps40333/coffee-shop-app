@@ -1,7 +1,7 @@
 # COFFEE-SHOP
 
 ## 部屬網址
-[點擊這裡查看我的專案](https://whps40333.github.io/coffee-shop-latest/)
+[點擊這裡查看我的專案](https://whps40333.github.io/coffee-shop-app/)
 ## 專案介紹
 這是一個用react框架撰寫的網頁,裡面包含登入註冊,收藏、填寫表單、查看表單資料和收藏店家的功能。
 資料庫的部分是用firebase的即時資料庫與authentiction，UIUX設計則是用figma畫圖。

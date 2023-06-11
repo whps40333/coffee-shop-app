@@ -71,7 +71,7 @@ export const AuthContextProvider = (props) => {
       const token = generateToken();
       localStorage.setItem("token", token);
       setIsLoggedIn(true);
-      navigate("/coffee-shop-app/main");
+      navigate("/coffee-shop-app/");
     } catch (error) {
       console.log(error);
     }
