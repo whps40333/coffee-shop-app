@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AuthContext from "../../store/auth-context";
 import styles from "../../styles/Header/Navigation.module.scss";
+import BaseLink from "../UI/Buttons/BaseLink";
 
 const Navigation = (props) => {
   const authCtx = useContext(AuthContext);
@@ -10,12 +11,12 @@ const Navigation = (props) => {
       <ul>
         {authCtx.isLoggedIn && (
           <li>
-            <a href="/user">使用者功能</a>
+            <BaseLink text="使用者功能" to="/User" />
           </li>
         )}
         {authCtx.isLoggedIn && (
           <li>
-            <a href="/main">店家清單</a>
+            <BaseLink text="店家清單" to="/main" />
           </li>
         )}
 

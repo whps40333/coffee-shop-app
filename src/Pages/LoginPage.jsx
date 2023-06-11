@@ -12,6 +12,7 @@ import styles from "../styles/pages/Login.module.scss";
 import coffeeLogo from "../images/coffeeLogo.png";
 import AuthContext from "../store/auth-context";
 import CoffeeShop from "../vedio/CoffeeShop.mp4";
+import BaseLink from "../components/UI/Buttons/BaseLink";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
@@ -139,7 +140,7 @@ function LoginPage(props) {
                 登入
               </WhiteButton>
             </div>
-            <a href="register">前往註冊</a>
+            <BaseLink text="註冊" to="/register" />
           </form>
         </BlackCard>
         <video className={styles.vedio} autoPlay loop muted>
