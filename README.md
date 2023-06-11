@@ -10,10 +10,10 @@
 首先是登入頁面，登入和註冊的背景動畫是用ae製作的，並接上firebase的authentication
 ![註冊頁面](./src/images/coffee-shop-register.jpg)
 註冊頁面
-![註冊和登入都有設useNavigate()導入mainPage，這個頁面可以查看店家資料並進行收藏](./src/images/%E5%BA%97%E5%AE%B6%E6%B8%85%E5%96%AE.jpg)
+![註冊和登入都有設useNavigate()導入mainPage，這個頁面可以查看店家資料並進行收藏](./src/images/MainPage%E5%8A%9F%E8%83%BD%E6%9B%B4%E6%96%B0.png)
 註冊和登入都有設useNavigate()導入mainPage，這個頁面可以查看店家資料並進行收藏
-![另外，mainPage也有做RWD的效果](./src/images/%E5%BA%97%E5%AE%B6%E6%B8%85%E5%96%AERWD.jpg)
-另外，mainPage也有做RWD的效果
+![另外，mainPage改成引入Google map api，點擊icon後即可將店家收藏](./src/images/MainPage%E5%8A%9F%E8%83%BD%E6%9B%B4%E6%96%B0_1.png)
+另外，mainPage改成引入Google map api，點擊icon後即可將店家收藏
 ![收藏店家後，可以去使用者功能查看已收藏的餐廳](./src/images/%E6%9F%A5%E7%9C%8B%E6%94%B6%E8%97%8F%E5%BA%97%E5%AE%B6.jpg)
 收藏店家後，可以去使用者功能查看已收藏的餐廳
 ![除了收藏餐廳，這裡也收錄了撰寫評論的功能](./src/images/%E6%92%B0%E5%AF%AB%E8%A9%95%E8%AB%96.jpg)
