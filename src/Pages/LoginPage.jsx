@@ -140,7 +140,7 @@ function LoginPage(props) {
                 登入
               </WhiteButton>
             </div>
-            <BaseLink text="註冊" to="/register" />
+            <BaseLink text="註冊" to="/coffee-shop-app/register" />
           </form>
         </BlackCard>
         <video className={styles.vedio} autoPlay loop muted>
