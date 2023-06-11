@@ -13,7 +13,16 @@ function Router() {
     <Routes>
       <Route
         path="/coffee-shop-app/"
-        element={!authCtx.isLoggedIn && <LoginPage onLogin={authCtx.onLogin} />}
+        element={
+          authCtx.isLoggedIn ? (
+            <MainPage
+              isAuthenticated={authCtx.isLoggedIn}
+              onLogout={authCtx.onLogout}
+            />
+          ) : (
+            <LoginPage onLogin={authCtx.onLogin} />
+          )
+        }
       />
       <Route
         path="/coffee-shop-app/main"
@@ -26,10 +35,7 @@ function Router() {
           )
         }
       />
-      <Route
-        path="/coffee-shop-app/register"
-        element={!authCtx.isLoggedIn && <RegisterPage />}
-      />
+
       <Route
         path="/coffee-shop-app/user/*"
         element={
