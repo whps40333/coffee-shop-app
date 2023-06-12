@@ -9,7 +9,7 @@ const MainHeader = (props) => {
       <BaseLink
         className={styles.main}
         text="Coffee Shop"
-        to="/coffee-shop-app/main"
+        to="/coffee-shop-app/"
       />
 
       <Navigation isLoggedIn={props.isLoggedIn} onLogout={props.onLogout} />

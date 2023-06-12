@@ -16,7 +16,7 @@ const Navigation = (props) => {
         )}
         {authCtx.isLoggedIn && (
           <li>
-            <BaseLink text="店家清單" to="/coffee-shop-app/main" />
+            <BaseLink text="店家清單" to="/coffee-shop-app/" />
           </li>
         )}
 
