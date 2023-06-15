@@ -69,7 +69,7 @@ function RegisterPage() {
         emailState.value,
         passwordState.value
       );
-      navigate("/coffee-shop-app/main");
+      navigate("/coffee-shop-app/");
       const user = userCredential.user;
       console.log(user);
     } catch (error) {
